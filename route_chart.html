@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .error {
+        color: red;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.6.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-13ffa4d4cef526a6cca102d8b5ad8356"}, "mark": {"type": "bar"}, "encoding": {"color": {"field": "dist(miles)", "legend": {"tickCount": 10, "title": "Average Route Distance (miles)"}, "scale": {"scheme": "plasma"}, "sort": "ascending", "type": "quantitative"}, "x": {"field": "Route", "sort": {"field": "Route", "op": "count", "order": "descending"}, "type": "nominal"}, "y": {"field": "Total Meals in Delivery(new)", "type": "quantitative"}}, "height": 300, "title": "Route Usage", "width": 650, "$schema": "https://vega.github.io/schema/vega-lite/v5.6.1.json", "datasets": {"data-13ffa4d4cef526a6cca102d8b5ad8356": [{"Route": "X", "Total Meals in Delivery(new)": 1910, "dist(miles)": 153.8998978076176}, {"Route": "W03", "Total Meals in Delivery(new)": 1350, "dist(miles)": 598.0210681553599}, {"Route": "W11", "Total Meals in Delivery(new)": 1340, "dist(miles)": 811.2091683965605}, {"Route": "R08", "Total Meals in Delivery(new)": 1280, "dist(miles)": 2689.0904909559267}, {"Route": "R04", "Total Meals in Delivery(new)": 1270, "dist(miles)": 940.8836147615597}, {"Route": "R07", "Total Meals in Delivery(new)": 1260, "dist(miles)": 2440.751981908462}, {"Route": "W02", "Total Meals in Delivery(new)": 1140, "dist(miles)": 359.79388184302536}, {"Route": "T03", "Total Meals in Delivery(new)": 1140, "dist(miles)": 250.17836117352715}, {"Route": "W08", "Total Meals in Delivery(new)": 1120, "dist(miles)": 483.765507861303}, {"Route": "W09", "Total Meals in Delivery(new)": 1110, "dist(miles)": 197.72376534737072}, {"Route": "T05", "Total Meals in Delivery(new)": 1100, "dist(miles)": 1570.0937738358773}, {"Route": "T02", "Total Meals in Delivery(new)": 1070, "dist(miles)": 1266.4258849257285}, {"Route": "R10", "Total Meals in Delivery(new)": 1070, "dist(miles)": 1355.8618811602041}, {"Route": "W10", "Total Meals in Delivery(new)": 1060, "dist(miles)": 212.4680647977177}, {"Route": "R09", "Total Meals in Delivery(new)": 1050, "dist(miles)": 2598.77952180681}, {"Route": "T07", "Total Meals in Delivery(new)": 1020, "dist(miles)": 1746.9060120927238}, {"Route": "W01", "Total Meals in Delivery(new)": 1000, "dist(miles)": 311.0014398319899}, {"Route": "W06", "Total Meals in Delivery(new)": 1000, "dist(miles)": 616.0021605185467}, {"Route": "R06", "Total Meals in Delivery(new)": 1000, "dist(miles)": 584.6558594263647}, {"Route": "T08", "Total Meals in Delivery(new)": 930, "dist(miles)": 134.16190814271246}, {"Route": "M08", "Total Meals in Delivery(new)": 920, "dist(miles)": 2153.4539445351593}, {"Route": "R02", "Total Meals in Delivery(new)": 870, "dist(miles)": 260.53674332600264}, {"Route": "T13", "Total Meals in Delivery(new)": 870, "dist(miles)": 1331.4187734245136}, {"Route": "R03", "Total Meals in Delivery(new)": 810, "dist(miles)": 594.789399359547}, {"Route": "W04", "Total Meals in Delivery(new)": 790, "dist(miles)": 391.04542395169136}, {"Route": "W05", "Total Meals in Delivery(new)": 770, "dist(miles)": 295.4190384958088}, {"Route": "F05", "Total Meals in Delivery(new)": 770, "dist(miles)": 172.2172315621566}, {"Route": "R01", "Total Meals in Delivery(new)": 690, "dist(miles)": 252.42541996818835}, {"Route": "F01", "Total Meals in Delivery(new)": 670, "dist(miles)": 91.11475024684204}, {"Route": "R11", "Total Meals in Delivery(new)": 630, "dist(miles)": 114.97234893336736}, {"Route": "F06", "Total Meals in Delivery(new)": 610, "dist(miles)": 37.843478290790976}, {"Route": "R12", "Total Meals in Delivery(new)": 610, "dist(miles)": 1789.8215731967018}, {"Route": "T06", "Total Meals in Delivery(new)": 610, "dist(miles)": 118.16589773959433}, {"Route": "M04", "Total Meals in Delivery(new)": 600, "dist(miles)": 86.42258269416352}, {"Route": "F07", "Total Meals in Delivery(new)": 600, "dist(miles)": 68.60451327195223}, {"Route": "T01", "Total Meals in Delivery(new)": 600, "dist(miles)": 394.975902077548}, {"Route": "T12", "Total Meals in Delivery(new)": 590, "dist(miles)": 933.3511189816186}, {"Route": "F04", "Total Meals in Delivery(new)": 590, "dist(miles)": 89.8667928865366}, {"Route": "M09", "Total Meals in Delivery(new)": 590, "dist(miles)": 2795.123749705637}, {"Route": "M07", "Total Meals in Delivery(new)": 570, "dist(miles)": 177.31148341716974}, {"Route": "F02", "Total Meals in Delivery(new)": 560, "dist(miles)": 86.09801577076367}, {"Route": "M02", "Total Meals in Delivery(new)": 480, "dist(miles)": 21.40747178474209}, {"Route": "M03", "Total Meals in Delivery(new)": 470, "dist(miles)": 79.95849655156616}, {"Route": "F08", "Total Meals in Delivery(new)": 440, "dist(miles)": 138.2917787608744}, {"Route": "F03", "Total Meals in Delivery(new)": 440, "dist(miles)": 81.9024963379106}, {"Route": "T11", "Total Meals in Delivery(new)": 430, "dist(miles)": 385.9325353109913}, {"Route": "F09", "Total Meals in Delivery(new)": 410, "dist(miles)": 102.99638872476383}, {"Route": "M01", "Total Meals in Delivery(new)": 300, "dist(miles)": 66.67307131986789}, {"Route": "Courier", "Total Meals in Delivery(new)": 290, "dist(miles)": 299.1980594443477}, {"Route": "R05", "Total Meals in Delivery(new)": 290, "dist(miles)": 205.32848589496973}, {"Route": "M10", "Total Meals in Delivery(new)": 290, "dist(miles)": 70.9999031266292}, {"Route": "T04", "Total Meals in Delivery(new)": 50, "dist(miles)": 363.1767588046258}, {"Route": "W12", "Total Meals in Delivery(new)": 10, "dist(miles)": 676.6579661996302}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div class="error" style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

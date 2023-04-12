@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Import Vega, Vega-lite and Vega-embed-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@5.6.1"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@6"></script>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,700" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>DS4200 Community Servings Website</title>
+</head>
+
+<body>
+    <!-- Customizing the navigation bar -->
+    <nav id="mainNavbar" class="navbar navbar-light navbar-expand-md py-0  fixed-top">
+
+        <!-- Adding the College name to the navigation bar -->
+        <a href="https://www.khoury.northeastern.edu" class="navbar-brand"><img src=logo.png
+                style="width:180px;height:60px" /></a>
+
+        <!-- Adding navigation tab names to the navigation bar. This is done as an unordered list. Each list element is a navigation bar element. For each, I added an <a></a> tag which will be used to direct to the appropriate section on click. You can add new items incase you want to add a new section in your webpage by simply copy pasting one of the list items. Make sure to correctly link it to the section that it corresponds to.-->
+        <div class="collapse navbar-collapse" id="navLinks">
+
+            <ul class="navbar-nav ">
+                <li class="nav-item">
+                    <a href="#motivation" class="nav-link">Motivation</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#data" class="nav-link">Data</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#task" class="nav-link">Task Analysis</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#design" class="nav-link">Design Process</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#visualization" class="nav-link">Data Visualizations and Analysis</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+
+    <!-- Section 1: Project title, group ID, group members names, and an optional project image goes here -->
+    <section class="container-fluid px-0 py-0" style="margin-top:150px">
+        <div>
+            <h1 style="text-align:center; font-weight: bold;"> DS4200 Community Servings Website </h1>
+            <h3 style="text-align:center;"> Dhruv Gandhi, Eli Paul, Ezra Statsky-Frank, Xinwen Zhang</h2>
+                <img style="display:block; margin-left:auto; margin-right:auto; width:50%" src="cs.png">
+        </div>
+    </section>
+
+
+    <!-- Section 2: Motivation -->
+
+    <section id="motivation" class="container-fluid px-0" style="margin-top:50px"></section>
+    <div>
+        <h2 style="text-align:center; font-weight: bold;"> Motivation </h2>
+        <p
+            style="text-align: center; font-size:20; margin-left:auto; margin-right:auto; width:80%; text-align: justify;">
+            Community Servings is a nonprofit food and nutrition program located in Jamaica Plain, Massachusetts. The
+            organization provides medically tailored and nutritious meals to chronically and critically ill individuals
+            as well as their families. As an organization, they are committed to prioritizing racial and economic
+            justice and health equity. As such, Community Servings actively engages the healthcare and policy leaders to
+            advocate for the integration of medically tailored meals into the healthcare system. At their core,
+            Community Servings believes that food not only provides sustenance, but is also a source of community, of an
+            agent of change, and most importantly, of healing.
+            <br>
+            <br>
+            In partnering with Community Servings, our goal is to provide interactive visualizations to effectively
+            characterize the organization's clientele. Our project will communicate information about the clients'
+            geographical, demographic, and contract distributions. Additional insights such as success rates amongst
+            different routes will be explored as well.
+        </p>
+    </div>
+    </section>
+
+
+    <!-- Section 3: Data -->
+    <section id="data" class="container-fluid px-0" style="margin-top:50px"></section>
+    <div>
+        <h2 style="text-align:center; font-weight: bold;"> Data </h2>
+        <p
+            style="text-align: center; font-size:20; margin-left:auto; margin-right:auto; width:80%; text-align: justify;">
+            Each entry in our dataset is a delivery/attempted delivery by Community Servings in the year 2022.
+            Salesforce was used to collect and store the data. The information given for each entry includes delivery
+            details, client demographics, and contract types. See the following for the data types.
+
+        <div class="row" style="margin-left:auto;margin-right:auto;width:50%;text-align:center;">
+            <div class="column">
+                <ul style="list-style-type:disc;margin-left:auto;margin-right:auto;font-size:20;text-align:justify;">
+
+                    <li>Total meals - quantitative</li>
+                    <li>Route - categorical</li>
+                    <li>City - categorical</li>
+                    <li>County - categorical</li>
+                    <li>State - categorical</li>
+                    <li>Zip - categorical</li>
+                </ul>
+            </div>
+
+            <div class="column">
+                <ul style="list-style-type:disc;margin-left:auto;margin-right:auto;font-size:20;text-align:justify;">
+
+                    <li>Age - quantitative</li>
+                    <li>Gender - categorical</li>
+                    <li>Race/ethnicity - categorical</li>
+                    <li>Contract Type - categorical</li>
+                    <li>Client status - categorical</li>
+                    <li>Delivery status - categorical</li>
+                </ul>
+            </div>
+        </div>
+
+        </p>
+    </div>
+    </section>
+
+    <!-- Section 4: Task Analysis -->
+    <section id="task" class="container-fluid px-0" style="margin-top:50px"></section>
+    <div>
+        <h2 style="text-align:center; font-weight: bold;"> Task Analysis </h2>
+        <p
+            style="text-align: center; font-size:20; margin-left:auto; margin-right:auto; width:80%;display:block;text-align:justify;">
+            Our team interviewed Adam and Kate from the data analytics team at Community Servings. During introductions,
+            we learned that Adam had a background in public health and epidemiology, and that he started out as a
+            volunteer. He emphasized that the mission of Community Servings is to treat food as medicine and to use it
+            as a preventative measure against illness. As we began discussing the data, we learned that they collected
+            all of their delivery route data for 2022 through SalesForce. The dataset includes delivery status, delivery
+            route, zip code, number of meals in the delivery, as well as client demographics. Given this information,
+            they wanted us to map out where their deliveries are going to, whether these deliveries were successful, and
+            track the client demographics. Other than these specific questions, they strongly urged us to investigate
+            any unknown relationships between the data and encouraged us to take a more exploratory approach.
+            Additionally, Adam and Kate mentioned that they plan to present the visualizations that we will create in
+            their annual financial report. If certain areas were discovered to have a very dense delivery history, it's
+            possible that our visualizations could help justify additional funding to open a new location.
+            <br>
+            <br>
+            A second brief interview was conducted to clarify the team goals with Adam. It was established that an
+            additional dataset including unique client IDs was needed to proceed. Rather than mapping out the number of
+            deliveries in a region, it was requested that we map out the number of clients instead. It was also
+            suggested for us to visualize the distribution of contract types in each region as well. The new dataset
+            will also eliminate duplicate data in client demographics caused by multiple deliveries to the same client.
+            As such, the task analysis table has been adjusted to reflect the new goals.
+
+        <table>
+            <tr>
+                <th>ID #</th>
+                <th>Domain Task</th>
+                <th>Analytic Task (Low-level, “Query”)</th>
+                <th>Search Task (Mid-level)</th>
+                <th>Analyze Task (High-level)</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>What is the geographical spread of the clients?</td>
+                <td>Determine Range</td>
+                <td>Explore</td>
+                <td>Discover</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>What is the demographic of the clients in each region?</td>
+                <td>Cluster</td>
+                <td>Browse</td>
+                <td>Discover</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>What is the distribution of contract types in each region?</td>
+                <td>Cluster</td>
+                <td>Browse</td>
+                <td>Discover</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>How does the success rate vary between drivers?</td>
+                <td>Correlate</td>
+                <td>Lookup</td>
+                <td>Discover</td>
+            </tr>
+        </table>
+        </p>
+    </div>
+    </section>
+
+
+    <!-- Section 5: Design Process -->
+    <section id="design" class="container-fluid px-0" style="margin-top:50px"></section>
+    <div>
+        <h2 style="text-align:center; font-weight: bold;"> Design Process </h2>
+
+        <div>
+            <img src="sketch.png" style="width:50%;margin-left:auto;margin-right:auto;display:block;">
+            <img src="sketch1.png" style="width:50%;margin-left:auto;margin-right:auto;display:block;">
+        </div>
+
+        <p
+            style="text-align: center; font-size:20; margin-left:auto; margin-right:auto; width:80%; text-align: justify;">
+            This visualization is a choropleth map that aims to answer both tasks 1 and 2. The map shows the
+            geographical spread of the deliveries, and the stacked bar chart shows the demographic information for each
+            zip code. The choropleth map uses the mark of area and the channels of position and color. The position
+            represents boundaries of each zip code within Massachusetts, and the colors represent the density of
+            deliveries in that zip code. The stacked bar chart uses the mark of lines and the channels of position,
+            color, and size. The x-axis represents the age groups of the clients, and the y-axis represents the number
+            of deliveries. The colors represent different race and ethnicity groups, and the lengths represent the
+            number of deliveries for each age group.
+            <br>
+            <br>
+            The choropleth map is our main chart, but once a user clicks within a zip code, the stacked bar chart will
+            pop up. This is the first interactive element. Ideally, this will be a two-way link. Clicking on a
+            race/ethnicity in the legend will show only the deliveries for that demographic on the choropleth map.
+            <br>
+            <br>
+            In addition, another chart that shows the contract type breakdown will be added as requested by our partner.
+            This visualization will be a “details-on-demand” feature of our main map and will be shown alongside the
+            client demographic breakdown after clicking within a region. This chart will be a simple bar chart that
+            utilizes dynamic features such as tooltips.
+            <br>
+            <br>
+            Because one of our tasks involved the geographical spread of client deliveries, we knew a map was necessary.
+            There were two maps that we were deciding between: a dot density map and a choropleth map. After careful
+            consideration, we chose the choropleth map because a dot density map may have large dots that overshadow
+            other dots. Another one of our tasks involved the demographic of the clients. We originally chose a layered
+            histogram with age as the binned variable and race as each individual histogram. However, the age data we
+            were given were ordinal (e.g. 0-9, 10-19..) rather than quantitative, so we moved away from the histogram.
+            In addition, some race/ethnicity groups were only represented in certain age groups, so the layered
+            histogram was not a great way to visualize the demographic breakdown. Thus, we chose the stacked bar chart
+            to showcase this data.
+        </p>
+    </div>
+    </section>
+
+
+    <!-- Section 6: Data Visualization(s) -->
+    <section id="visualization" class="container-fluid px-0" style="margin-top:50px"></section>
+    <div>
+        <h2 style="text-align:center; font-weight: bold;"> Data Visualization(s) </h2>
+    </div>
+
+    <!-- FIRST VIS -->
+    <p style="font-size:20px; font-weight: bold; text-align: center;">First Visualization: Client Density by County</p>
+    <p style="font-size:20px; font-weight:20; text-align: center;">This visualization is a choropleth map showing the
+        density of Community Servings clients in the Northeast region.</p>
+
+    <div id="vis1" class="center"></div>
+
+    <script>
+        (function (vegaEmbed) {
+            var spec = { "config": { "view": { "continuousWidth": 400, "continuousHeight": 300 } }, "hconcat": [{ "layer": [{ "data": { "url": "https://raw.githubusercontent.com/lsouth/DS4200/main/Boston_Neighborhoods.json", "format": { "feature": "Boston_Neighborhoods", "type": "topojson" } }, "mark": { "type": "geoshape", "fill": "lightgray", "stroke": "white" }, "height": 500, "width": 500 }, { "data": { "name": "data-16ffd969661b9b9d5b5a9522470b815a" }, "mark": "point", "encoding": { "latitude": { "field": "latitude", "type": "quantitative" }, "longitude": { "field": "longitude", "type": "quantitative" }, "opacity": { "condition": { "value": 1, "selection": "selector002" }, "value": 0.2 } }, "selection": { "selector002": { "type": "multi", "fields": ["location"] } } }] }, { "data": { "name": "data-16ffd969661b9b9d5b5a9522470b815a" }, "mark": "bar", "encoding": { "opacity": { "condition": { "value": 1, "selection": "selector002" }, "value": 0.2 }, "x": { "field": "location", "type": "nominal" }, "y": { "aggregate": "count", "type": "quantitative" } }, "selection": { "selector002": { "type": "multi", "fields": ["location"] } } }], "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json", "datasets": { "data-16ffd969661b9b9d5b5a9522470b815a": [{ "state": "Massachusetts", "location": "Boston", "address": "101 Summer St Boston, MA 02110 US", "latitude": 42.3534009669804, "longitude": -71.0580917615833 }, { "state": "Massachusetts", "location": "Boston", "address": "148 Brookline Ave Boston, MA 02215 US", "latitude": 42.3446571, "longitude": -71.1008254 }, { "state": "Massachusetts", "location": "Boston", "address": "283 Washington St Boston, MA 02108 US", "latitude": 42.3575493062503, "longitude": -71.0584290638063 }, { "state": "Massachusetts", "location": "Boston", "address": "51 Boston Wharf Rd Boston, MA 02210 US", "latitude": 42.3510480274497, "longitude": -71.0457239226236 }, { "state": "Massachusetts", "location": "Boston", "address": "553 Boylston St Boston, MA 02116 US", "latitude": 42.3506571, "longitude": -71.0761335999999 }, { "state": "Massachusetts", "location": "Boston", "address": "8 Park Plz Boston, MA 02116 US", "latitude": 42.3517537785312, "longitude": -71.0669728884126 }, { "state": "Massachusetts", "location": "Jamaica Plain", "address": null, "latitude": 42.3132, "longitude": -71.1141 }, { "state": "Massachusetts", "location": "Dorchester", "address": null, "latitude": 42.2995, "longitude": -71.0649 }] } };
+            var embedOpt = { "mode": "vega-lite" };
+
+            function showError(el, error) {
+                el.innerHTML = ('<div class="error" style="color:red;">'
+                    + '<p>JavaScript Error: ' + error.message + '</p>'
+                    + "<p>This usually means there's a typo in your chart specification. "
+                    + "See the javascript console for the full traceback.</p>"
+                    + '</div>');
+                throw error;
+            }
+            const el = document.getElementById('vis1');
+            vegaEmbed("#vis1", spec, embedOpt)
+                .catch(error => showError(el, error));
+        })(vegaEmbed);
+    </script>
+
+    <p style="text-align: center; font-size:20; margin-left:auto; margin-right:auto; width:80%; text-align: justify;">
+        caption for vis 1 </p>
+
+
+     <!-- SECOND VIS -->
+    <p style="font-size:20px; font-weight: bold;text-align: center;">Second Visualization: Total Meals Delivered by
+        Route Distance</p>
+
+    <div id="vis2" class="center"></div>
+    <script>
+        (function (vegaEmbed) {
+            var spec = { "config": { "view": { "continuousWidth": 300, "continuousHeight": 300 } }, "data": { "name": "data-0b3231be7cddf1d398d635b765c8e712" }, "mark": { "type": "bar" }, "encoding": { "color": { "field": "dist(miles)", "legend": { "tickCount": 10, "title": "Average Route Distance (miles)" }, "scale": { "scheme": "plasma" }, "sort": "ascending", "type": "quantitative" }, "x": { "field": "Route", "sort": { "field": "Route", "op": "count", "order": "descending" }, "type": "nominal" }, "y": { "field": "Total Meals in Delivery(new)", "type": "quantitative" } }, "height": 300, "title": "Route Usage", "width": 650, "$schema": "https://vega.github.io/schema/vega-lite/v5.6.1.json", "datasets": { "data-0b3231be7cddf1d398d635b765c8e712": [{ "Route": "Shipped", "Total Meals in Delivery(new)": 13105, "dist(miles)": 1434.2738292114313 }, { "Route": "X", "Total Meals in Delivery(new)": 1910, "dist(miles)": 153.8998978076176 }, { "Route": "W03", "Total Meals in Delivery(new)": 1350, "dist(miles)": 598.0210681553599 }, { "Route": "W11", "Total Meals in Delivery(new)": 1340, "dist(miles)": 811.2091683965605 }, { "Route": "R08", "Total Meals in Delivery(new)": 1280, "dist(miles)": 2689.0904909559267 }, { "Route": "R04", "Total Meals in Delivery(new)": 1270, "dist(miles)": 940.8836147615597 }, { "Route": "R07", "Total Meals in Delivery(new)": 1260, "dist(miles)": 2440.751981908462 }, { "Route": "W02", "Total Meals in Delivery(new)": 1140, "dist(miles)": 359.79388184302536 }, { "Route": "T03", "Total Meals in Delivery(new)": 1140, "dist(miles)": 250.17836117352715 }, { "Route": "W08", "Total Meals in Delivery(new)": 1120, "dist(miles)": 483.765507861303 }, { "Route": "W09", "Total Meals in Delivery(new)": 1110, "dist(miles)": 197.72376534737072 }, { "Route": "T05", "Total Meals in Delivery(new)": 1100, "dist(miles)": 1570.0937738358773 }, { "Route": "T02", "Total Meals in Delivery(new)": 1070, "dist(miles)": 1266.4258849257285 }, { "Route": "R10", "Total Meals in Delivery(new)": 1070, "dist(miles)": 1355.8618811602041 }, { "Route": "W10", "Total Meals in Delivery(new)": 1060, "dist(miles)": 212.4680647977177 }, { "Route": "R09", "Total Meals in Delivery(new)": 1050, "dist(miles)": 2598.77952180681 }, { "Route": "T07", "Total Meals in Delivery(new)": 1020, "dist(miles)": 1746.9060120927238 }, { "Route": "W01", "Total Meals in Delivery(new)": 1000, "dist(miles)": 311.0014398319899 }, { "Route": "W06", "Total Meals in Delivery(new)": 1000, "dist(miles)": 616.0021605185467 }, { "Route": "R06", "Total Meals in Delivery(new)": 1000, "dist(miles)": 584.6558594263647 }, { "Route": "T08", "Total Meals in Delivery(new)": 930, "dist(miles)": 134.16190814271246 }, { "Route": "M08", "Total Meals in Delivery(new)": 920, "dist(miles)": 2153.4539445351593 }, { "Route": "R02", "Total Meals in Delivery(new)": 870, "dist(miles)": 260.53674332600264 }, { "Route": "T13", "Total Meals in Delivery(new)": 870, "dist(miles)": 1331.4187734245136 }, { "Route": "R03", "Total Meals in Delivery(new)": 810, "dist(miles)": 594.789399359547 }, { "Route": "W04", "Total Meals in Delivery(new)": 790, "dist(miles)": 391.04542395169136 }, { "Route": "W05", "Total Meals in Delivery(new)": 770, "dist(miles)": 295.4190384958088 }, { "Route": "F05", "Total Meals in Delivery(new)": 770, "dist(miles)": 172.2172315621566 }, { "Route": "R01", "Total Meals in Delivery(new)": 690, "dist(miles)": 252.42541996818835 }, { "Route": "F01", "Total Meals in Delivery(new)": 670, "dist(miles)": 91.11475024684204 }, { "Route": "R11", "Total Meals in Delivery(new)": 630, "dist(miles)": 114.97234893336736 }, { "Route": "F06", "Total Meals in Delivery(new)": 610, "dist(miles)": 37.843478290790976 }, { "Route": "R12", "Total Meals in Delivery(new)": 610, "dist(miles)": 1789.8215731967018 }, { "Route": "T06", "Total Meals in Delivery(new)": 610, "dist(miles)": 118.16589773959433 }, { "Route": "M04", "Total Meals in Delivery(new)": 600, "dist(miles)": 86.42258269416352 }, { "Route": "F07", "Total Meals in Delivery(new)": 600, "dist(miles)": 68.60451327195223 }, { "Route": "T01", "Total Meals in Delivery(new)": 600, "dist(miles)": 394.975902077548 }, { "Route": "T12", "Total Meals in Delivery(new)": 590, "dist(miles)": 933.3511189816186 }, { "Route": "F04", "Total Meals in Delivery(new)": 590, "dist(miles)": 89.8667928865366 }, { "Route": "M09", "Total Meals in Delivery(new)": 590, "dist(miles)": 2795.123749705637 }, { "Route": "M07", "Total Meals in Delivery(new)": 570, "dist(miles)": 177.31148341716974 }, { "Route": "F02", "Total Meals in Delivery(new)": 560, "dist(miles)": 86.09801577076367 }, { "Route": "M02", "Total Meals in Delivery(new)": 480, "dist(miles)": 21.40747178474209 }, { "Route": "M03", "Total Meals in Delivery(new)": 470, "dist(miles)": 79.95849655156616 }, { "Route": "F08", "Total Meals in Delivery(new)": 440, "dist(miles)": 138.2917787608744 }, { "Route": "F03", "Total Meals in Delivery(new)": 440, "dist(miles)": 81.9024963379106 }, { "Route": "T11", "Total Meals in Delivery(new)": 430, "dist(miles)": 385.9325353109913 }, { "Route": "F09", "Total Meals in Delivery(new)": 410, "dist(miles)": 102.99638872476383 }, { "Route": "M01", "Total Meals in Delivery(new)": 300, "dist(miles)": 66.67307131986789 }, { "Route": "Courier", "Total Meals in Delivery(new)": 290, "dist(miles)": 299.1980594443477 }, { "Route": "R05", "Total Meals in Delivery(new)": 290, "dist(miles)": 205.32848589496973 }, { "Route": "M10", "Total Meals in Delivery(new)": 290, "dist(miles)": 70.9999031266292 }, { "Route": "T04", "Total Meals in Delivery(new)": 50, "dist(miles)": 363.1767588046258 }, { "Route": "W12", "Total Meals in Delivery(new)": 10, "dist(miles)": 676.6579661996302 }] } };
+            var embedOpt = { "mode": "vega-lite" };
+
+            function showError(el, error) {
+                el.innerHTML = ('<div class="error" style="color:red;">'
+                    + '<p>JavaScript Error: ' + error.message + '</p>'
+                    + "<p>This usually means there's a typo in your chart specification. "
+                    + "See the javascript console for the full traceback.</p>"
+                    + '</div>');
+                throw error;
+            }
+            const el = document.getElementById('vis2');
+            vegaEmbed("#vis2", spec, embedOpt)
+                .catch(error => showError(el, error));
+        })(vegaEmbed);
+
+    </script>
+
+    <div id="vis3"></div>
+    <script>
+        (function (vegaEmbed) {
+            var spec = { "config": { "view": { "continuousWidth": 300, "continuousHeight": 300 } }, "data": { "name": "data-13ffa4d4cef526a6cca102d8b5ad8356" }, "mark": { "type": "bar" }, "encoding": { "color": { "field": "dist(miles)", "legend": { "tickCount": 10, "title": "Average Route Distance (miles)" }, "scale": { "scheme": "plasma" }, "sort": "ascending", "type": "quantitative" }, "x": { "field": "Route", "sort": { "field": "Route", "op": "count", "order": "descending" }, "type": "nominal" }, "y": { "field": "Total Meals in Delivery(new)", "type": "quantitative" } }, "height": 300, "title": "Route Usage", "width": 650, "$schema": "https://vega.github.io/schema/vega-lite/v5.6.1.json", "datasets": { "data-13ffa4d4cef526a6cca102d8b5ad8356": [{ "Route": "X", "Total Meals in Delivery(new)": 1910, "dist(miles)": 153.8998978076176 }, { "Route": "W03", "Total Meals in Delivery(new)": 1350, "dist(miles)": 598.0210681553599 }, { "Route": "W11", "Total Meals in Delivery(new)": 1340, "dist(miles)": 811.2091683965605 }, { "Route": "R08", "Total Meals in Delivery(new)": 1280, "dist(miles)": 2689.0904909559267 }, { "Route": "R04", "Total Meals in Delivery(new)": 1270, "dist(miles)": 940.8836147615597 }, { "Route": "R07", "Total Meals in Delivery(new)": 1260, "dist(miles)": 2440.751981908462 }, { "Route": "W02", "Total Meals in Delivery(new)": 1140, "dist(miles)": 359.79388184302536 }, { "Route": "T03", "Total Meals in Delivery(new)": 1140, "dist(miles)": 250.17836117352715 }, { "Route": "W08", "Total Meals in Delivery(new)": 1120, "dist(miles)": 483.765507861303 }, { "Route": "W09", "Total Meals in Delivery(new)": 1110, "dist(miles)": 197.72376534737072 }, { "Route": "T05", "Total Meals in Delivery(new)": 1100, "dist(miles)": 1570.0937738358773 }, { "Route": "T02", "Total Meals in Delivery(new)": 1070, "dist(miles)": 1266.4258849257285 }, { "Route": "R10", "Total Meals in Delivery(new)": 1070, "dist(miles)": 1355.8618811602041 }, { "Route": "W10", "Total Meals in Delivery(new)": 1060, "dist(miles)": 212.4680647977177 }, { "Route": "R09", "Total Meals in Delivery(new)": 1050, "dist(miles)": 2598.77952180681 }, { "Route": "T07", "Total Meals in Delivery(new)": 1020, "dist(miles)": 1746.9060120927238 }, { "Route": "W01", "Total Meals in Delivery(new)": 1000, "dist(miles)": 311.0014398319899 }, { "Route": "W06", "Total Meals in Delivery(new)": 1000, "dist(miles)": 616.0021605185467 }, { "Route": "R06", "Total Meals in Delivery(new)": 1000, "dist(miles)": 584.6558594263647 }, { "Route": "T08", "Total Meals in Delivery(new)": 930, "dist(miles)": 134.16190814271246 }, { "Route": "M08", "Total Meals in Delivery(new)": 920, "dist(miles)": 2153.4539445351593 }, { "Route": "R02", "Total Meals in Delivery(new)": 870, "dist(miles)": 260.53674332600264 }, { "Route": "T13", "Total Meals in Delivery(new)": 870, "dist(miles)": 1331.4187734245136 }, { "Route": "R03", "Total Meals in Delivery(new)": 810, "dist(miles)": 594.789399359547 }, { "Route": "W04", "Total Meals in Delivery(new)": 790, "dist(miles)": 391.04542395169136 }, { "Route": "W05", "Total Meals in Delivery(new)": 770, "dist(miles)": 295.4190384958088 }, { "Route": "F05", "Total Meals in Delivery(new)": 770, "dist(miles)": 172.2172315621566 }, { "Route": "R01", "Total Meals in Delivery(new)": 690, "dist(miles)": 252.42541996818835 }, { "Route": "F01", "Total Meals in Delivery(new)": 670, "dist(miles)": 91.11475024684204 }, { "Route": "R11", "Total Meals in Delivery(new)": 630, "dist(miles)": 114.97234893336736 }, { "Route": "F06", "Total Meals in Delivery(new)": 610, "dist(miles)": 37.843478290790976 }, { "Route": "R12", "Total Meals in Delivery(new)": 610, "dist(miles)": 1789.8215731967018 }, { "Route": "T06", "Total Meals in Delivery(new)": 610, "dist(miles)": 118.16589773959433 }, { "Route": "M04", "Total Meals in Delivery(new)": 600, "dist(miles)": 86.42258269416352 }, { "Route": "F07", "Total Meals in Delivery(new)": 600, "dist(miles)": 68.60451327195223 }, { "Route": "T01", "Total Meals in Delivery(new)": 600, "dist(miles)": 394.975902077548 }, { "Route": "T12", "Total Meals in Delivery(new)": 590, "dist(miles)": 933.3511189816186 }, { "Route": "F04", "Total Meals in Delivery(new)": 590, "dist(miles)": 89.8667928865366 }, { "Route": "M09", "Total Meals in Delivery(new)": 590, "dist(miles)": 2795.123749705637 }, { "Route": "M07", "Total Meals in Delivery(new)": 570, "dist(miles)": 177.31148341716974 }, { "Route": "F02", "Total Meals in Delivery(new)": 560, "dist(miles)": 86.09801577076367 }, { "Route": "M02", "Total Meals in Delivery(new)": 480, "dist(miles)": 21.40747178474209 }, { "Route": "M03", "Total Meals in Delivery(new)": 470, "dist(miles)": 79.95849655156616 }, { "Route": "F08", "Total Meals in Delivery(new)": 440, "dist(miles)": 138.2917787608744 }, { "Route": "F03", "Total Meals in Delivery(new)": 440, "dist(miles)": 81.9024963379106 }, { "Route": "T11", "Total Meals in Delivery(new)": 430, "dist(miles)": 385.9325353109913 }, { "Route": "F09", "Total Meals in Delivery(new)": 410, "dist(miles)": 102.99638872476383 }, { "Route": "M01", "Total Meals in Delivery(new)": 300, "dist(miles)": 66.67307131986789 }, { "Route": "Courier", "Total Meals in Delivery(new)": 290, "dist(miles)": 299.1980594443477 }, { "Route": "R05", "Total Meals in Delivery(new)": 290, "dist(miles)": 205.32848589496973 }, { "Route": "M10", "Total Meals in Delivery(new)": 290, "dist(miles)": 70.9999031266292 }, { "Route": "T04", "Total Meals in Delivery(new)": 50, "dist(miles)": 363.1767588046258 }, { "Route": "W12", "Total Meals in Delivery(new)": 10, "dist(miles)": 676.6579661996302 }] } };
+            var embedOpt = { "mode": "vega-lite" };
+
+            function showError(el, error) {
+                el.innerHTML = ('<div class="error" style="color:red;">'
+                    + '<p>JavaScript Error: ' + error.message + '</p>'
+                    + "<p>This usually means there's a typo in your chart specification. "
+                    + "See the javascript console for the full traceback.</p>"
+                    + '</div>');
+                throw error;
+            }
+            const el = document.getElementById('vis3');
+            vegaEmbed("#vis3", spec, embedOpt)
+                .catch(error => showError(el, error));
+        })(vegaEmbed);
+
+    </script>
+    <p style="text-align: center; font-size:20; margin-left:auto; margin-right:auto; width:80%; text-align: justify;">
+        Both sorted bar charts above show the same
+        information, however, the first chart omits the outlier of the shipped route to allow for better viewing of the
+        rest of the routes. In the final visualization, we will use the graph without shipped as shipped implies that
+        Community Servings used another service to deliver their meals and is of less interest to them, then deliveries
+        their employees carried out. This chart uses line as the mark while length and color are the channels used to
+        encode number of deliveries and average route distance respectively. Average Rout distance was calculated using
+        the latitude and longitude of Community Servings and the delivery zip code coordinates. From this chart we can
+        see that the routes with the most deliveries tend to be shorter routes and the longest distance routes have less
+        total meals delivered. </p>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <footer style="background-color:#000000d0; height:50px; margin-top:100px;">
+        <p style="font-size:1em; color:#ffffffe5; text-align:center; font-weight:bold; margin-top:0px;"> This work was
+            supported in part by the Khoury College of Computer Sciences at Northeastern University.</p>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+    <script>
+        $(function () {
+            $(document).scroll(function () {
+                var $nav = $("#mainNavbar");
+                $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+            });
+        });
+    </script>
+</body>
+
+</html>

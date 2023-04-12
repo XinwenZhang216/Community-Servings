@@ -1,0 +1,102 @@
+/* Styling the Body and text fonts*/
+body {
+    background:white;
+    font-family: "Nunito", sans-serif;
+    
+}
+
+/* Styling the Navbar*/
+#mainNavbar {
+    font-size: 1.5rem;
+    font-weight: 100;    
+}
+
+#mainNavbar .nav-link {
+    color:  #000000;
+    font-size:1.3rem;
+    font-family: "Nunito", sans-serif;
+    text-align: center;
+    padding: 10px 15px;
+}
+
+#mainNavbar.navbar.scrolled .nav-link{
+    color:white;
+}
+
+#mainNavbar .nav-link:hover {
+    color: white;
+    font-size:22px;
+    font-weight:bold;
+
+}
+
+#mainNavbar .navbar-brand {
+    color: #373A36;
+    font-size: 1.5rem;
+}
+
+.navbar.scrolled {
+    background: #000000d5;
+    transition: background 300ms;
+
+}
+
+/* Adjusting the anchors to each sections so that the header is not hidden by the navbar. Try commenting the code below this specific comment to see how the section
+header gets hidden by the navbar*/
+
+#motivation, #data, #task, #design, #visualization {
+    scroll-margin-top: 100px;
+  }
+
+  /* make two columns of data types */
+  .row {
+    display: flex;
+    justify-content:center;
+  }
+  
+  .column {
+    flex: 50%;
+  }
+
+  /* task analysis table */
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+    text-align: justify;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: justify;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+
+  #vis1 {
+    margin: auto;
+    width: 50%;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  #vis2,#vis3 {
+    margin: auto;
+    width: 80%;
+    background-color: rgb(255, 254, 254);
+    padding: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+ 
