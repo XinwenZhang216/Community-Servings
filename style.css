@@ -44,7 +44,7 @@ body {
 /* Adjusting the anchors to each sections so that the header is not hidden by the navbar. Try commenting the code below this specific comment to see how the section
 header gets hidden by the navbar*/
 
-#motivation, #data, #task, #design, #visualization {
+#motivation, #data, #task, #design, #visualization, #conclusion {
     scroll-margin-top: 100px;
   }
 
@@ -78,9 +78,9 @@ header gets hidden by the navbar*/
     background-color: #dddddd;
   }
 
-  #vis1, #vis2,#vis3,#vis4 {
+  #vis1, #vis2, #vis3 {
     margin: auto;
-    width: 80%;
+    width: 100%;
     background-color: rgb(255, 254, 254);
     padding: 10px;
     margin-bottom: 20px;
@@ -88,4 +88,8 @@ header gets hidden by the navbar*/
     justify-content: center;
   }
 
- 
+  
+
+  
+  
+
